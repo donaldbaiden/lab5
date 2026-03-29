@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<task6-arm64-apple-macosx-debug.exe>","<task6-arm64-apple-macosx-debug.module>"]
+  "task6-arm64-apple-macosx-debug.exe": ["<task6-arm64-apple-macosx-debug.exe>"]
+  "task6-arm64-apple-macosx-debug.module": ["<task6-arm64-apple-macosx-debug.module>"]
+  "test": ["<task6-arm64-apple-macosx-debug.exe>","<task6-arm64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6":
+    is-mutated: true
+commands:
+  "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6-entitlement.plist"]
+    description: "Write auxiliary file /Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6-entitlement.plist"
+
+  "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/DictionaryManager.swift","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/Models/Avto.swift","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/Models/Vendor.swift","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/main.swift"]
+    outputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/sources"]
+    description: "Write auxiliary file /Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/sources"
+
+  "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Avto.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/DictionaryManager.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Vendor.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/main.swift.o"]
+    outputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.product/Objects.LinkFileList"
+
+  "<task6-arm64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<task6-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<task6-arm64-apple-macosx-debug.exe>"]
+
+  "<task6-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/DictionaryManager.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Avto.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Vendor.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/main.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/Modules/task6.swiftmodule"]
+    outputs: ["<task6-arm64-apple-macosx-debug.module>"]
+
+  "C.task6-arm64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Avto.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/DictionaryManager.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Vendor.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/main.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.product/Objects.LinkFileList"]
+    outputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/task6"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug","-o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6","-module-name","task6","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_task6_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/macosx","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx10.13","-Xlinker","-add_ast_path","-Xlinker","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/Modules/task6.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.task6-arm64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6-entitlement.plist"]
+    outputs: ["<task6-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/task6"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6-entitlement.plist","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6"]
+
+  "C.task6-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/DictionaryManager.swift","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/Models/Avto.swift","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/Models/Vendor.swift","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/main.swift","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/sources"]
+    outputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/DictionaryManager.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Avto.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Vendor.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/main.swift.o","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/Modules/task6.swiftmodule"]
+    description: "Compiling Swift Module 'task6' (4 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","task6","-emit-dependencies","-emit-module","-emit-module-path","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/Modules/task6.swiftmodule","-output-file-map","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/output-file-map.json","-incremental","-c","@/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/sources","-I","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","task6_main","-color-diagnostics","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Package.swift","/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

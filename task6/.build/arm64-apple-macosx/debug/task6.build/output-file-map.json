@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/primary.swiftdeps"
+  },
+  "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/DictionaryManager.swift": {
+    "dependencies": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/DictionaryManager.d",
+    "object": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/DictionaryManager.swift.o",
+    "swiftmodule": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/DictionaryManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/DictionaryManager.swiftdeps",
+    "diagnostics": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/DictionaryManager.dia"
+  },
+  "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/Models/Avto.swift": {
+    "dependencies": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Avto.d",
+    "object": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Avto.swift.o",
+    "swiftmodule": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Avto~partial.swiftmodule",
+    "swift-dependencies": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Avto.swiftdeps",
+    "diagnostics": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Avto.dia"
+  },
+  "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/Models/Vendor.swift": {
+    "dependencies": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Vendor.d",
+    "object": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Vendor.swift.o",
+    "swiftmodule": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Vendor~partial.swiftmodule",
+    "swift-dependencies": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Vendor.swiftdeps",
+    "diagnostics": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/Vendor.dia"
+  },
+  "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/Sources/task6/main.swift": {
+    "dependencies": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/main.d",
+    "object": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/main.swift.o",
+    "swiftmodule": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/main.swiftdeps",
+    "diagnostics": "/Users/mihailkoruzn/Documents/fpmi/tpmp/lab5/task6/.build/arm64-apple-macosx/debug/task6.build/main.dia"
+  }
+}
